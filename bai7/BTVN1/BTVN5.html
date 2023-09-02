@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let diemkiemtra, diemgiuaky, diemcuoiky;
+        diemkiemtra = +prompt("nhap diem kiem tra");
+        diemgiuaky = +prompt("nhap diem giua ky");
+        diemcuoiky = +prompt("nhap diem cuoi ky");
+        /* diem kiem tra he so 1
+        diem giua ki he so 2
+        diem cuoi ky he so 3  */
+        let b = (diemkiemtra + 2 * diemgiuaky + 3 * diemcuoiky) / 6;
+        let a = b.toFixed(2);
+        if (a < 2.5) {
+            document.write(` hoc sinh xep loai kem voi so diem la ${a}` );
+        } else if (a < 5) {
+            document.write(` hoc sinh xep loai yeu voi so diem la ${a}`);
+
+        }
+        else if ( a < 7){ 
+            document.write(` hoc sinh xep loai trung binh voi so diem la ${a}`);
+            
+        } 
+        else if (a < 8) {
+            document.write(` hoc sinh xep loai tien tien voi so diem la ${a}`);
+
+        } else if (a < 9) {
+            document.write(` hoc sinh xep loai gioi voi so diem la ${a}`);
+
+        } else if (a <= 10) {
+            document.write(` hoc sinh xep loai suat xac voi so diem la ${a}`);
+
+        }
+
+
+    </script>
+</body>
+
+</html>

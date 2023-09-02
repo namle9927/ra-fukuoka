@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a = +prompt("hay nhap so tu nhien bat ky");
+        let b = 0;
+        for (let index = 0; index < a; index++) {
+           if (a % index ==0){
+            b += index; 
+           }
+            
+        }
+        if(b == a){
+            document.write(`so ${a} la so hoan hao`);
+
+        }else{
+            document.write(`so ${a} khong la so hoan hao`);
+
+        }
+
+    </script>
+</body>
+</html>
