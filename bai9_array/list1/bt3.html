@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let string = prompt('nhap chuoi ki tu');
+        let arrName = string.split("");
+        let result = 0;
+        for (let index = 0; index < arrName.length; index++) {
+            if ( !isNaN(arrName[index])) {
+                result++;
+            }
+            // Number.isInteger(arrName[index])
+            // console.log(isNaN(arrName[index]));
+
+        }
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

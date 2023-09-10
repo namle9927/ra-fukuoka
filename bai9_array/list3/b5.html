@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let string = prompt('nhap vao day so bat ki(ngan cach bang space):');
+        let array = string.split(" ");
+        let valueBigger = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let index = 0; index < array.length - i - 1; index++) {
+                if (+array[index] > +array[index + 1]) {
+                    valueBigger =  array[index];
+                    array[index] = array[index + 1];
+                    array[index + 1] = valueBigger
+                }
+
+            }
+        }
+        console.log(array.join(" "));
+
+
+    </script>
+</body>
+
+</html>

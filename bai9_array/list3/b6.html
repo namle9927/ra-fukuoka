@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let string = prompt('nhap vao chuoi bat ki:');
+        let array = string.split("");
+        let result = [];
+        // let flag = true;
+        for (let index = 0; index < array.length; index++) {
+           if (!result.includes(array[index])) {
+            result.push(array[index]);
+           } 
+        }
+        console.log(result.join(""));
+    </script>
+</body>
+</html>

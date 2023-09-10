@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let string = prompt('nhap chuoi 10 ky tu bat ky(ngan cach nhau bang phim space) ');
+        let arr = string.split(" ");
+        let max = arr[0];
+        for (let index = 1; index < arr.length; index++) {
+            if (arr[index] > max) {
+                max = arr[index];
+            }
+        }
+        console.log("cac so ban nhap vao la " + arr);
+        console.log("gia tri lon nhat la " + max);
+        console.log("vi tri INDEX cua gia tri lon nhat trong mang la " + arr.indexOf(max));
+
+
+    </script>
+</body>
+
+</html>

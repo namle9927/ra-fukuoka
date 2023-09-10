@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let string1 = prompt('nhap chuoi ki tu thu nhat');
+        let string2 = prompt('nhap chuoi ki tu thu hai');
+        let arr1 = string1.split("");
+        let arr2 = string2.split("");
+        let result = true;
+for (let index = 0; index < arr1.length; index++) {
+    if (arr1[index] == arr2[index]) {
+        result = true
+    } else result = false
+    
+}
+if (result == true) {
+    console.log("2 chuoi nay giong nhau");
+} else console.log("2 chuoi nay khong giong nhau");
+    </script>
+</body>
+</html>

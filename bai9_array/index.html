@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let studentName = ["hoa","minh","hong"];
+        console.log("do dai cua mang la", studentName.length);//xem do dai bang
+        console.log(studentName[2]); //goi ra 1 phan tu
+        studentName.push("nam"); //them ptu vao cuoi mang
+        // console.log(studentName);
+        studentName.unshift("khanh");
+        console.log(studentName);
+        // studentName.splice(3,2,"linh");
+        console.log( studentName.splice(2,2,"linh"));
+        studentName[1]= "hue";
+        console.log(studentName);
+        console.log(Array.isArray(studentName));
+        let number = [1,6,4,7,7];
+        let number2 = [1,6,4,7,7];
+2
+        // number.reverse(); dao nguoc mang
+        // console.log(number);
+        // let result = number.concat(number2); gop mang
+        // let text = "gfdb fhffgfgd fgdfg";//chuyen tu chuoi thang mang
+        
+        // console.log(result);
+        let arr = ["linh","hoa","anh"];
+        // let result = arr.join("+");
+        // let result = arr.slice();sao chep, cat ra mang moi
+        console.log(arr.includes("linh"));//kiem tra phan tu co trong mang hay ko. tra ve boolean
+
+    
+
+
+         
+        
+        
+    </script>
+</body>
+</html>
