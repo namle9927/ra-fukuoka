@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let string = prompt('hay nhap vao chuoi ki tu bat ky');
+        let x = prompt('hay nhap vao ki tu can dem trong chuoi');
+        let arr = string.split("");
+        function demSoLanXuatHien(arr, x) {
+            let result = 0;
+            for (let index = 0; index < arr.length; index++) {
+                if (arr[index] == x) {
+                    result++;
+                }
+            }
+            return result;
+        } 
+        console.log( 'phan tu ' + x + ' xuat hien ' + demSoLanXuatHien(arr, x) +' lan');
+    </script>
+</body>
+</html>

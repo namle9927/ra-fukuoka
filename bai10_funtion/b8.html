@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let string = prompt('nhap mang so nguyen bat ki');
+        function reverseString(string) {
+            let arr = string.split("");
+            arr.reverse();
+            let newArr = arr.join("");
+            return newArr;
+        }
+        console.log( 'mang sau khi dao nguoc la: ' + reverseString(string));
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a = +prompt('hay nhap vao so bat ky'); 
+        let b = +prompt('hay nhap vao so bat ky'); 
+        let c = +prompt('hay nhap vao so bat ky'); 
+        function SS(a, b, c) {
+            let min = a;
+            if (b < a && b < c ) {
+                min = b;
+            } 
+            if (c < a && c < b) {
+                min = c;
+            }
+            return min;
+        }
+        console.log('so be nhat la: ' + SS(a, b, c));
+
+    </script>
+</body>
+</html>

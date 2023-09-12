@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let r = prompt('hay nhap vao so nguyen bat ky'); 
+        function tinhGiaiThua(r) {
+            let result = 1;
+            if (r == 1) {
+                return result;
+            } else {
+                result = r * tinhGiaiThua(r -1);
+                return result;
+            }
+        }
+        console.log(tinhGiaiThua(r));
+
+    </script>
+</body>
+</html>
