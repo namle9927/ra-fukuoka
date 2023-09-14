@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let stringNum = prompt('nhap vao chuoi 5 so nguyen');
+        let arr = stringNum.split(" ");
+        function checkSoNguyenTo(num) {
+            if (num <= 1) {
+                return false;
+            }
+            if (num == 2) {
+                return true;
+            }
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+       function tinhTong(input) {
+        let sum = 0;
+        for (let i = 0; i < input.length; i++) {
+            if (checkSoNguyenTo(input[i])) {
+                sum += +input[i];
+            }
+            
+        }
+        return sum;
+       }
+       console.log(('tong cac so nguyen to trong chuoi la ' + tinhTong(arr)));
+    </script>
+</body>
+
+</html>
