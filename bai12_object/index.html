@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // tao obj su dung object literals
+        /* let cat = {
+            name: 'Tom',
+            agr: 2,
+            run: (a)=>{
+            console.log(`bat chuot ${a}`);   
+            }
+        }
+        cat.run('jerry'); */
+        // tao obj bang cach dug ham(funtion) contructor
+        /* function Student(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        let student1 = new Student('Nam', 25);
+        let student2 = new Student('Hoa', 26);
+        // ... neu con thi nhap them 
+        console.log(student1); */
+        // tao obj = cach dung class
+       /*  class Student {
+            constructor(name, age, address){
+                this.name = name;
+                this.age = age;
+                this.address = address;
+            }
+        }
+        let student1=  new Student ('Nam', 25, "Thanh Hoa VN");
+        console.log(student1); */
+        // them thuoc tinh
+      /*   let student = {
+            name: 'Minh',
+        }
+        student.age = 18;
+        console.log(student); */
+        // doc thuoc tinh
+       /*  let student = {
+            name: 'Minh',
+        }
+        student.age = 18;
+        console.log(student.name);
+
+        for (const key in student) {
+            console.log(student[key]);
+        } */
+        // update
+     /*    let student = {
+            name: 'Minh',
+        }
+        student.age = 18;
+        student.name = 'ngoc';
+        console.log(student); */
+        //delete
+        let student = {
+            name: 'Minh',
+        }
+        student.age = 18;
+        delete student.age;
+        console.log(student);
+    </script>
+</body>
+</html>

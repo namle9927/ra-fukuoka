@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function checkStringMax(input) {
+            let chuoiDoiChieu = '';
+            let chuoiMax = '';
+            for (let i = 0; i < input.length; i++) {
+                if (chuoiDoiChieu.includes(input[i])) {
+                    chuoiDoiChieu = chuoiDoiChieu.slice(chuoiDoiChieu.indexOf(input[i]) + 1);
+                };
+                chuoiDoiChieu += input[i];
+                if (chuoiDoiChieu.length > chuoiMax.length) {
+                    chuoiMax = chuoiDoiChieu;
+                }
+            }
+            return chuoiMax;
+        }
+        let string = prompt("hay nhap vao chuoi bat ki");
+        // let string = "545fg6fbf464rdgjtrgfa";
+        let result = checkStringMax(string);
+        console.log(result);
+    </script>
+</body>
+
+</html>
