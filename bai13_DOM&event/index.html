@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .event {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--   <p> hoc vien RA</p>
+    <p class="title" id="heading"> hoc viemmn RA</p>
+
+    <h2 class="title"> day la the h2</h2>
+    <h3 class="title"> day la the h3</h3>
+    <div class="box">
+        <h5>day la the h5</h5>
+    </div> -->
+
+    <!-- cac cach lay ra element
+        lay theo class => tra ve dang html collection( dang mang nhung ko phai mang)
+        lay theo id => tra ve 1 doi tuong
+        lay theo the tag =>tra ve dang html collection( dang mang nhung ko phai mang)
+        lay theo querySelector =>tra ve doi tuong
+        lay theo querySelectorAll =>tra ve dang NODE lish( dang mang nhung ko phai mang)
+
+     -->
+
+    <!--     <script>
+        /*   let element = document.getElementById('heading') //lay element theo id
+          let elements = document.getElementsByClassName('title'); //lay element theo class
+          let elements2 = document.getElementsByTagName('p'); //lay element theo tag
+          let elements3 = document.querySelector('#heading'); //lay element theo querySelector
+          let elements4 = document.querySelectorAll('.title'); //lay element theo querySelector
+          console.log(elements4); */
+       /*  let element = document.getElementById('heading');
+        element.style.color = "red"; */
+        /*   let element2 = document.querySelector('p');
+          element2.id = 'heading'; */
+        // element2.classList.add('title');
+        /*  classList: add, remove, toggle (co class thi xoa di ko thi them vao),
+        contain (kiem tra xem co ton tai class do hay ko) */
+       /*  let element2 = document.getElementsByTagName('h2');
+        console.log(element2);
+        element2[0].style.color = "blue"
+        let element3 = document.getElementsByTagName("h3");
+        element3[0].innerHTML = "New h3"
+        let element4 = document.getElementsByClassName('box')[0];
+
+        element4.innerHTML = '<h6>day la the h6</h6>'; */
+
+        // text 
+        // phan biet innerText va textContent
+
+
+    </script> -->
+
+<input type="text" placeholder="nhap vao" id="name" onchange="changeValue()">
+    <div class="title">
+        event
+    </div>
+    <!-- <button onclick="changeColor()">click</button> -->
+    <button id = 'button'>button</button>
+
+
+
+</body>
+<script>
+ /*    function changeColor() {
+        console.log('bat dau vao ham');
+        // document.getElementsByClassName('title')[0].style.color = 'red';
+        document.getElementsByClassName('title')[0].classList.toggle('event');
+        setTimeout(() => {
+            test();
+        }, 1000);
+        
+        
+        
+        
+    }
+    
+    function test() {
+        document.getElementsByClassName('title')[0].classList.remove('event');
+        
+
+    } */
+
+    // let element = document.getElementById('button');
+    // element.addEventListener
+
+    function changeValue() {
+        let result = document.getElementById('name').value;
+        console.log('em yeu ' + result);
+    }
+    document.addEventListener()
+</script>
+
+</html>
