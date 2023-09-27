@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 400px;
+        height: 150px;
+        background-color: aquamarine;
+
+    }
+
+    label {
+        display: inline-block;
+        width: 100px;
+        margin: 10px;
+    }
+
+    button {
+        margin: 10px;
+    }
+
+    tr,
+    td {
+        text-align: center;
+        padding: 5px;
+    }
+</style>
+
+<body>
+
+    <!-- 
+        cac buoc lam bai quan ly sinh vien
+        b1- tao file html
+        b2- tao mang luu noi dung cong viec
+        b3- render mang chua noi dung cong viec
+     -->
+    <div class="container">
+        <label for="">Ten Sinh vien</label>
+        <input id="name" type="text"><br>
+        <label for="">Dia chi</label>
+        <input id="address" type="text"><br>
+        <label for="">Email</label>
+        <input id="email" type="email"><br>
+        <button onclick="saveStudent()">Save</button>
+    </div>
+    <div class="table"></div>
+    <table border="1px">
+        <caption>quan ly sinh vien</caption>
+        <thead>
+            <tr>
+                <th>STT </th>
+                <th>Ten </th>
+                <th>Dia chi</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <!-- <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    Le Khanh Linh
+                </td>
+                <td>
+                    Thanh Hoa
+                </td>
+                <td>
+                    Khanhlinh@gmail.com
+                </td>
+                <td>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </td>
+            </tr> -->
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+    <script>
+        // bien flag de kiem tra xem user muon nhan adit hay them
+        //tao mang luu thong tin sinh vien
+        // let students = [];
+
+        // khi khai bao mang rong, nhan f5 thi se reset lai mang ban dau thanh mang rong 
+        // lay du lieu tren Local ve de hien thi
+        let students = JSON.parse(localStorage.getItem('students')) || [];
+
+
+
+        // tao id ngau nhien
+        function randomID() {
+            let id = Math.floor(Math.random() * 1000000);
+            return id;
+        }
+        //xu ly voi save btn
+        function saveStudent() {
+            //tao mang luu danh sach sinh vien
+            // lay gia tri cac truong nguoi dung nhap du lieu
+            let nameValue = document.getElementById('name').value;
+            let addressValue = document.getElementById('address').value;
+            let emailValue = document.getElementById('email').value;
+            // khoi tao doi tuong Student chua cac thuoc tinh va gia tri 
+            let studentInfo = {
+                name: nameValue,
+                address: addressValue,
+                email: emailValue,
+                id: randomID()
+            };
+            let flag = localStorage.getItem("keyId");
+            if (flag != null) {
+                for (let i = 0; i < students.length; i++) {
+                    if (students[i].id == flag) {
+                        students.splice(i, 1,
+                            { ...studentInfo, id: flag }
+                        )
+                        localStorage.setItem('students', JSON.stringify(students));
+                        showStudent();
+                        localStorage.removeItem('keyId');
+                        return;
+                    }
+                }
+            }
+            students.push(studentInfo);
+            localStorage.setItem('students', JSON.stringify(students));
+            //sau khi them duoc danh sach sinh vien thi goi lai ham render
+            showStudent();
+
+            // console.log(students);
+        }
+        // ham render du lieu
+        function showStudent(params) {
+            let text = '';
+            for (let i = 0; i < students.length; i++) {
+                text +=
+                    ` <tr>
+                    <td>
+                        ${i + 1}
+                    </td>
+                    <td>
+                        ${students[i].name}
+                    </td>
+                    <td>
+                        ${students[i].address}
+                    </td>
+                    <td>
+                        ${students[i].email}
+                    </td>
+                    <td>
+                        <button onclick ="editUser(${students[i].id})">Edit</button>
+                        <button onclick ="deleteUser(${students[i].id})">Delete</button>
+                    </td>
+                </tr>`
+                    ;
+
+            }
+            document.getElementById("tbody").innerHTML = text;
+
+        }
+        showStudent();
+        //tao ham xoa thong tin sinh vien
+        function deleteUser(param) {
+            // console.log(id);
+            for (let i = 0; i < students.length; i++) {
+                // tim phan tu co id nam o vi tri thu bao nhieu trog mang 
+                if (students[i].id == param) {
+                    students.splice(i, 1)
+                    // khi xoa xong luu lai tren Local
+                    localStorage.setItem('students', JSON.stringify(students));
+                    showStudent();
+                    return;
+                }
+            }
+        }
+        function editUser(paramsId) {
+            localStorage.setItem('keyId', paramsId);
+            for (let i = 0; i < students.length; i++) {
+                if (students[i].id == paramsId) {
+                    document.getElementById('name').value = students[i].name;
+                    document.getElementById('address').value = students[i].address;
+                    document.getElementById('email').value = students[i].email;
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
